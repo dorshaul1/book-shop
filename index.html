@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=F, initial-scale=1.0"> -->
+    <title>book shop</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="oninit()">
+
+    <div class="background"><img src="img/library.jpeg"></div>
+
+    <h1>Book Shop</h1>
+    <input type="text" name="title" placeholder="title" class="add-title" required />
+    <input type="text" name="price" placeholder="price" class="add-title" required />
+
+    <button class="add-book" onclick="onClickAdd()">+</button>
+
+    <div class="modal-background"></div>
+
+
+    <div class="modal">
+        <button class="close" onclick="closeModal()" class="X">X</button>
+    </div>
+
+    <table class="books-table">
+        <thead>
+
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+
+        </thead>
+
+        <tbody class="books"></tbody>
+    </table>
+
+
+    <script src="js/utils.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/main-service.js"></script>
+    <script src="js/main-controler.js"></script>
+</body>
+
+</html>

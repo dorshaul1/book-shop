@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.background img {
+    width: 100vh;
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.8;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    /* background: url(../img/library.jpeg) fixed no-repeat; */
+    /* height: 100vh; */
+    /* min-width: 1000px; */
+    /* height: 100vh; */
+}
+
+h1 {
+    font-size: 30px;
+    margin: 20px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.add-title {
+    margin: 20px;
+
+}
+
+.add-book {
+    margin: 20px;
+}
+
+.books-table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.897);
+}
+
+.books-table th {
+    width: 500px;
+    border: 1px solid black;
+}
+
+.books-table td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.update-modal {
+    display: none;
+    /* margin: auto; */
+    position: fixed;
+    top: 20%;
+    left: 35%;
+    background-color: rgb(230, 227, 227);
+    width: 400px;
+    height: 400px;
+    /* box-shadow: 0px 0px 300px 111px rgba(0, 0, 0, 0.8); */
+    border-radius: 10%;
+    padding: 20px;
+    z-index: 20;
+}
+
+.modal-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(68, 68, 68, 0.589);
+    z-index: 10;
+}
+
+.modal input {
+    margin: 20px;
+}
+
+.modal {
+    display: none;
+    /* margin: auto; */
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    background-color: rgb(230, 227, 227);
+    width: 400px;
+    height: 400px;
+    /* box-shadow: 0px 0px 300px 111px rgba(0, 0, 0, 0.5); */
+    border-radius: 10%;
+    padding: 20px;
+    z-index: 20;
+}
+
+.actions button {
+    border: none;
+    border-radius: 20px;
+    /* width: 50px; */
+    height: 20px;
+    color: white;
+}
+
+.delete-btn {
+    background-color: rgb(189, 42, 42);
+    width: 50px;
+}
+
+.update-btn {
+    background-color: rgb(255, 217, 0);
+    width: 50px;
+}
+
+.read-btn {
+    background-color: rgb(89, 71, 255);
+    width: 50px;
+}
+
+.details-btn {
+    background-color: rgb(38, 184, 19);
+    border-radius: 50%;
+    width: 20px;
+}
