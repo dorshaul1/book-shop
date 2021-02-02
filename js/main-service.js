@@ -74,7 +74,6 @@ var gTrans = {
 
 }
 
-
 var gCurrLang = 'en';
 
 _createBooks()
@@ -102,12 +101,11 @@ function updateBook(bookId, name = null, price = null) {
     var bookidx = gBooks.findIndex(function (book) {
         return book.id === bookId
     })
-    // console.log('currBook:', currBook)
-    // if(name)
+    
+    var currBook = gBooks[bookidx]
 
-    console.log('Books[bookidx]:', Books[bookidx])
-    // gBooks[bookidx].name = name
-    // currBook.Price = price
+    currBook.name = name
+    currBook.price = price
     // currBook.imgUrl = imgUrl
 
     _saveBookssToStorage();

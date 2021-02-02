@@ -21,15 +21,11 @@ body.rtl {
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    /* background: url(../img/library.jpeg) fixed no-repeat; */
-    /* height: 100vh; */
-    /* min-width: 1000px; */
-    /* height: 100vh; */
 }
 
 h1 {
-    font-size: 30px;
-    margin: 20px;
+    color: white;
+    text-shadow: black 4px 2px 1px
 }
 
 button {

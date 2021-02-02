@@ -58,25 +58,10 @@ function closeModalNew(){
     // $modal.css("opacity", "0.5");
 }
 
-
-// function openModal() {
-//     var elModal = document.querySelector('.modal')
-//     var elBackgroundModal = document.querySelector('.modal-background')
-//     elBackgroundModal.style.display = 'block'
-//     elModal.style.display = 'block'
-//     doTrans()
-// }
-
-// function closeModal() {
-//     var elBackgroundModal = document.querySelector('.modal-background')
-//     var elModal = document.querySelector('.modal')
-//     elModal.style.display = 'none'
-//     elBackgroundModal.style.display = 'none'
-// }
-
 function onClickUpdateBook(id) {
     openModalNew()
-    var book = getBookById(id)
+    // var book = getBookById(id)
+    // console.log('book:', book)
     // console.log('book:', book)
 
     var strHTML = `
@@ -84,7 +69,7 @@ function onClickUpdateBook(id) {
     <h3></h3>
     <input type="text" name="updateTitle" placeholder="title" required />
     <input type="text" name="updatePrice" placeholder="price" required />
-    <button class="confirm" onclick="onUpdateBook(${id})">confirm</button>
+    <button class="confirm" onclick="onUpdateBook('${id}')">confirm</button>
     `
     document.querySelector('.modal-body').innerHTML = strHTML
     doTrans()
@@ -92,19 +77,16 @@ function onClickUpdateBook(id) {
 
 function onUpdateBook(id) {
 
-    var elName = document.querySelector('input[name=updateTitle]')
-    var elPrice = document.querySelector('input[name=updatePrice]')
-    var name = elName.value
-    console.log('name:', name)
-    var price = elPrice.value
+    var elName = $('input[name=updateTitle]')
+    var elPrice = $('input[name=updatePrice]')
+    
+    var name = elName.val()
+    var price = elPrice.val()
 
     updateBook(id, name, price)
 
-    // elTitle.value = ''
-    // elPrice.value = ''
-    // elImg.value = ''
-
     renderBooks()
+    closeModalNew()
 }
 
 
