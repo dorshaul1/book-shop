@@ -1,7 +1,8 @@
 'use strict'
 
 const KEY = 'booksDb'
-
+const PAGE_SIZE = 5;
+var gPageIdx = 0;
 var gBooks
 
 var gTrans = {
@@ -79,8 +80,25 @@ var gCurrLang = 'en';
 _createBooks()
 
 function getBooks() {
-    return gBooks
+    var startIdx = gPageIdx * PAGE_SIZE;
+    return gBooks.slice(startIdx, startIdx + PAGE_SIZE)
+
 }
+
+function nextPage() {
+    gPageIdx++;
+    if (gPageIdx * PAGE_SIZE >= gBooks.length) {
+        gPageIdx = 0;
+    }
+}
+
+function prevPage() {
+    gPageIdx--;
+    if (gPageIdx * PAGE_SIZE >= gBooks.length) {
+        gPageIdx = 0;
+    }
+}
+
 
 function addBook(name, price) {
     var book = _createBook(name, price)
@@ -101,7 +119,7 @@ function updateBook(bookId, name = null, price = null) {
     var bookidx = gBooks.findIndex(function (book) {
         return book.id === bookId
     })
-    
+
     var currBook = gBooks[bookidx]
 
     currBook.name = name

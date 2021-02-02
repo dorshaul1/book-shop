@@ -60,9 +60,6 @@ function closeModalNew(){
 
 function onClickUpdateBook(id) {
     openModalNew()
-    // var book = getBookById(id)
-    // console.log('book:', book)
-    // console.log('book:', book)
 
     var strHTML = `
     <h2 data-trans="update">update</h2>
@@ -126,6 +123,16 @@ function onDetails(id) {
 
     document.querySelector('.modal-body').innerHTML = strHTML
     doTrans()
+}
+
+function onNextPage() {
+    nextPage();
+    renderBooks();
+}
+
+function onPrevPage() {
+    prevPage();
+    renderBooks();
 }
 
 function onSetLang(lang) {
