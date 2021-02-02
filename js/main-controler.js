@@ -140,8 +140,12 @@ function onSetLang(lang) {
 
     if (lang === 'he') {
         document.body.classList.add('rtl');
+        document.querySelector('.page-next').classList.add('rtl');
+        document.querySelector('.page-prev').classList.add('rtl');
     } else {
         document.body.classList.remove('rtl');
+        document.querySelector('.page-next').classList.remove('rtl');
+        document.querySelector('.page-prev').classList.remove('rtl');
     }
     renderBooks();
     doTrans();
