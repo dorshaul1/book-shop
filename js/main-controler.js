@@ -16,10 +16,10 @@ function renderBooks() {
     
         
           <td><div class="actions">
-              <button onclick="onDetails('${book.id}')" class="details-btn">?</button>
-              <button onclick="onReadBook('${book.id}')" class="read-btn">read</button>
-              <button onclick="onClickUpdateBook('${book.id}')" class="update-btn">update</button>
-              <button onclick="onDeleteBook('${book.id}')" class="delete-btn">delete</button>
+              <button onclick="onDetails('${book.id}')" class="details-btn btn bg-success text-light rounded-circle">?</button>
+              <button onclick="onReadBook('${book.id}')" class="read-btn btn bg-primary text-light rounded-pill">read</button>
+              <button onclick="onClickUpdateBook('${book.id}')" class="update-btn btn bg-warning text-light rounded-pill">update</button>
+              <button onclick="onDeleteBook('${book.id}')" class="delete-btn btn bg-danger text-light rounded-pill">delete</button>
               </div></td>
           </tr>
           `

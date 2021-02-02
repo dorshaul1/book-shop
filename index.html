@@ -6,33 +6,38 @@
     <!-- <meta name="viewport" content="width=F, initial-scale=1.0"> -->
     <title>book shop</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
 </head>
 
 <body onload="oninit()">
 
-    <div class="background"><img src="img/library.jpeg"></div>
+    <div class="background"><img src="img/library.jpg"></div>
 
     <h1>Book Shop</h1>
     <input type="text" name="title" placeholder="title" class="add-title" required />
     <input type="text" name="price" placeholder="price" class="add-title" required />
 
-    <button class="add-book" onclick="onClickAdd()">+</button>
+    <button class="add-book btn bg-light rounded" onclick="onClickAdd()">+</button>
 
     <div class="modal-background"></div>
 
 
-    <div class="modal">
+    <div class="modal-test modal-dialog modal-dialog-scrollable">test</div>
+
+    <div class="modal ">
         <button class="close" onclick="closeModal()" class="X">X</button>
     </div>
 
-    <table class="books-table">
-        <thead>
+    <table class="books-table tables">
+        <thead class="thead-dark">
 
             <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Price</th>
-                <th>Actions</th>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Price</th>
+                <th scope="col">Actions</th>
             </tr>
 
         </thead>
