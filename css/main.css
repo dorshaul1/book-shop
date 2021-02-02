@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body.rtl {
+    direction: rtl;
+}
+
 .background img {
     width: 100vh;
     position: absolute;
@@ -63,22 +67,20 @@ button {
     display: flex;
     justify-content: space-evenly;
 }
-
+/* 
 .update-modal {
     display: none;
-    /* margin: auto; */
     position: fixed;
     top: 20%;
     left: 35%;
     background-color: rgb(230, 227, 227);
     width: 400px;
     height: 400px;
-    /* box-shadow: 0px 0px 300px 111px rgba(0, 0, 0, 0.8); */
     border-radius: 10%;
     padding: 20px;
     z-index: 20;
 }
-/* 
+
 .modal-background {
     display: none;
     position: fixed;
